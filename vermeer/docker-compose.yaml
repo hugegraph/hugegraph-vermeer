@@ -15,7 +15,7 @@ services:
     image: hugegraph/vermeer
     container_name: vermeer-worker
     volumes:
-      - ~/:/go/bin/config # Change here to your actual config path
+      - ${HOME}/:/go/bin/config # Change here to your actual config path
     command: --env=worker
     networks:
       vermeer_network:
