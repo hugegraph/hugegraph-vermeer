@@ -15,8 +15,8 @@ Create local configuration files, for example, `~/master.ini` and `~/worker.ini`
 Run with Docker. The `--env` flag specifies the file name.
 
 ```
-master: docker run -v ~/:/go/bin/config hugegraph/vermeer --env=master
-worker: docker run -v ~/:/go/bin/config hugegraph/vermeer --env=worker
+master: docker run -v ${HOME}/:/go/bin/config hugegraph/vermeer --env=master
+worker: docker run -v ${HOME}/:/go/bin/config hugegraph/vermeer --env=worker
 ```
 
 We've also provided a `docker-compose` file. Once you've created `~/master.ini` and `~/worker.ini`, and updated the `master_peer` in `worker.ini` to `172.20.0.10:6689`, you can run it using the following command:
