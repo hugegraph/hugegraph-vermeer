@@ -14,8 +14,8 @@ docker pull hugegraph/vermeer:latest
 
 基于docker运行，其中`--env`指定的是文件名称。
 ```
-master: docker run -v ~/:/go/bin/config hugegraph/vermeer --env=master
-worker: docker run -v ~/:/go/bin/config hugegraph/vermeer --env=worker
+master: docker run -v ${HOME}/:/go/bin/config hugegraph/vermeer --env=master
+worker: docker run -v ${HOME}/:/go/bin/config hugegraph/vermeer --env=worker
 ```
 
 我们也提供了`docker-compose`文件，当创建好`~/master.ini`与`~/worker.ini`，将`worker.ini`中的`master_peer`修改为`172.20.0.10:6689`后，即可通过以下命令运行：
